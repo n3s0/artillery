@@ -182,7 +182,7 @@ if answer.lower() in ["yes", "y"]:
             print("[*] Installation complete. Edit /var/artillery/config in order to config artillery to your liking")
         #added to start after install.launches in seperate window
         if is_windows():
-            os.chdir("src\windows")
+            os.chdir("src\\windows")
             #copy over banlist
             os.system("start cmd /K banlist.bat")
             #Wait to make sure banlist is copied over
@@ -221,7 +221,7 @@ if answer == "uninstall":
             #remove program files
             subprocess.call(['cmd', '/C', 'rmdir', '/S', '/Q', 'C:\\Program Files (x86)\\Artillery'])
             #del uninstall cache
-            os.chdir("src\windows")
+            os.chdir("src\\windows")
             os.system("start cmd /K del_cache.bat")
             #just so they can see this message slleep a sec
             print("[*] Artillery has been uninstalled.\n[*] Manually kill the process if it is still running.")
